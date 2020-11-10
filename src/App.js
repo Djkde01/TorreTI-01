@@ -12,9 +12,9 @@ function App() {
     <BrowserRouter>
       <div className="App">
       <Header />
-      <Route path="/" component={HomeScreen} exact/>
-      <Route path="/profiles" component={ProfilesScreen}/>
-      <Route path ="/jobs" component={JobsScreen}/>
+      <Route path="./" component={HomeScreen} exact/>
+      <Route path="./profiles" component={ProfilesScreen}/>
+      <Route path ="./jobs" component={JobsScreen}/>
       <Footer/>
       </div>
       

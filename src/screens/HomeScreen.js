@@ -12,8 +12,8 @@ export default function HomeScreen(){
             </div>
             {
                 userExists ?
-                <a href="/jobs" className="home-button">Search jobs</a> :
-                <a href="/profiles" className="home-button">Search profiles</a>
+                <a href="./jobs" className="home-button">Search jobs</a> :
+                <a href="./profiles" className="home-button">Search profiles</a>
             }
             <div>
                 <p>If you don't have a profile</p>

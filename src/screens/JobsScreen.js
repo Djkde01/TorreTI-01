@@ -7,9 +7,6 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 
 export default function JobsScreen(){
-    let cors = require('cors');
-    const app = express();
-    app.use(cors());
     const user = Cookies.get('userID')
     const [profile, setProfile] = useState([]);
     const [jobs, setJobs] = useState([])
