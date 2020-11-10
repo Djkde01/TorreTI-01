@@ -5,7 +5,7 @@ export default function Picture(props){
         <div className="hexagon">
             <div className="hexagon-in1">
                 <div className="hexagon-in2">
-                <img src={props.imageUrl}/>
+                    <img src={props.imageUrl} alt="User profile"/>
                 </div>
             </div>
         </div>

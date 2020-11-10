@@ -95,3 +95,48 @@ a {
   -o-transform: rotate(-60deg);
   transform: rotate(-60deg);
 }
+.hexagon-in2 img {
+  width: 150px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.row.center {
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #c0c0c0;
+  width: 30%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background-color: #0f0f0f;
+  border-radius: 25px;
+  margin: 15px;
+  padding: 0px 50px;
+}
+.danger {
+  color: #a02020;
+}
+
+.alert {
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+}
+
+.alert-info {
+  color: #2020a0;
+  background-color: #e0e0ff;
+}
+.alert-danger {
+  color: #a02020;
+  background-color: #ffe0e0;
+}
