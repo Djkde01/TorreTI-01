@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/TorreTI-01/static/css/main.bdec5bd1.chunk.css",
+    "main.js": "/TorreTI-01/static/js/main.adf24b05.chunk.js",
+    "main.js.map": "/TorreTI-01/static/js/main.adf24b05.chunk.js.map",
+    "runtime-main.js": "/TorreTI-01/static/js/runtime-main.edd48384.js",
+    "runtime-main.js.map": "/TorreTI-01/static/js/runtime-main.edd48384.js.map",
+    "static/js/2.2f675065.chunk.js": "/TorreTI-01/static/js/2.2f675065.chunk.js",
+    "static/js/2.2f675065.chunk.js.map": "/TorreTI-01/static/js/2.2f675065.chunk.js.map",
+    "static/js/3.9bcf042f.chunk.js": "/TorreTI-01/static/js/3.9bcf042f.chunk.js",
+    "static/js/3.9bcf042f.chunk.js.map": "/TorreTI-01/static/js/3.9bcf042f.chunk.js.map",
+    "index.html": "/TorreTI-01/index.html",
+    "static/css/main.bdec5bd1.chunk.css.map": "/TorreTI-01/static/css/main.bdec5bd1.chunk.css.map",
+    "static/js/2.2f675065.chunk.js.LICENSE.txt": "/TorreTI-01/static/js/2.2f675065.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.edd48384.js",
+    "static/js/2.2f675065.chunk.js",
+    "static/css/main.bdec5bd1.chunk.css",
+    "static/js/main.adf24b05.chunk.js"
+  ]
+}
