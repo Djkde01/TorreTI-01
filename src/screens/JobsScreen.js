@@ -1,14 +1,18 @@
-import React from 'react';
-import {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 
-import axios from 'axios';
+import Cookies from 'js-cookie'
+import axios from 'axios'
 
-import Profile from '../components/Profile';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 
-export default function ProfilesScreen(){
-    const [profiles, setProfiles] = useState([]);
+export default function JobsScreen(){
+    let cors = require('cors');
+    const app = express();
+    app.use(cors());
+    const user = Cookies.get('userID')
+    const [profile, setProfile] = useState([]);
+    const [jobs, setJobs] = useState([])
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
 
@@ -16,9 +20,11 @@ export default function ProfilesScreen(){
         const fetchData = async()=>{
             try {
                 setLoading(true);
-                const { data } = await axios.post('https://search.torre.co/people/_search/?offset=0&size=10');
+                const { userData } = await axios.get(`https://torre.bio/api/bios/${user}`);
+                const { jobsData } = await axios.post("https://search.torre.co/opportunities/_search/?offset=0&size=10");
                 setLoading(false);
-                setProfiles(data.results);
+                setProfile(userData);
+                setJobs(jobsData.results);
             } catch (err) {
                 setError(err.message);
                 setLoading(false);
@@ -34,13 +40,8 @@ export default function ProfilesScreen(){
             error ? 
             <MessageBox variant="danger">{error}</MessageBox> :
             <div className="row center">
-                <h3>Please select your profile</h3>
-                {
-                    profiles.map((profile,i) =>(
-                        <Profile key={i} profile={profile} index={i} />
-                    )
-                    )
-                }
+                <h3>Welcome back! {profile.name}</h3>
+                
             </div>
             }
         </main>

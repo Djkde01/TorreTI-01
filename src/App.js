@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HomeScreen from './screens/HomeScreen';
 import ProfilesScreen from './screens/ProfilesScreen'
+import JobsScreen from './screens/JobsScreen';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <Route path="/" component={HomeScreen} exact/>
       <Route path="/profiles" component={ProfilesScreen}/>
+      <Route path ="/jobs" component={JobsScreen}/>
       <Footer/>
       </div>
       
