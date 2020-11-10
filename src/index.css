@@ -9,13 +9,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
 }
+.App {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: 112px 1fr 100px;
+  grid-auto-columns: 1fr;
+  height: 100%;
+}
 header {
   width: 100vw;
   height: 112px;
   background-color: #27292d;
-  position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -24,20 +31,20 @@ header img {
   height: 80px;
 }
 footer {
-  width: 100vw;
   background-color: #27292d;
   display: flex;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  grid-area: footer;
 }
 a {
   text-decoration: none;
   color: red;
+}
+main {
+  grid-area: main;
 }
 
 .HomeScreen {

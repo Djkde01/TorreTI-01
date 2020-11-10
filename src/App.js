@@ -11,11 +11,11 @@ function App() {
     <BrowserRouter>
       <div className="App">
       <Header />
+      <Route path="/" component={HomeScreen} exact/>
+      <Route path="/profiles" component={ProfilesScreen}/>
       <Footer/>
       </div>
       
-      <Route path="/" component={HomeScreen} exact/>
-      <Route path="/profiles" component={ProfilesScreen}/>
     </BrowserRouter>
 
   );

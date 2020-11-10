@@ -27,7 +27,7 @@ export default function ProfilesScreen(){
         fetchData();
     },[]);
     return(
-        <div>
+        <main>
             {loading ? 
 
             <LoadingBox/> : 
@@ -43,6 +43,6 @@ export default function ProfilesScreen(){
                 }
             </div>
             }
-        </div>
+        </main>
     )
 }
