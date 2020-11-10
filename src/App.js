@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import {Route } from 'react-router-dom';
+import {HashRouter as BrowserRouter} from 'react-router-dom';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -12,9 +13,9 @@ function App() {
     <BrowserRouter>
       <div className="App">
       <Header />
-      <Route path="./" component={HomeScreen} exact/>
-      <Route path="./profiles" component={ProfilesScreen}/>
-      <Route path ="./jobs" component={JobsScreen}/>
+      <Route path="/" component={HomeScreen} exact/>
+      <Route path="/profiles" component={ProfilesScreen}/>
+      <Route path ="/jobs" component={JobsScreen}/>
       <Footer/>
       </div>
       

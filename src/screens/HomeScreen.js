@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Cookies from 'js-cookie'
+import {Link} from 'react-router-dom';
 
 export default function HomeScreen(){
     const userExists = Cookies.get('userID')
@@ -12,8 +13,8 @@ export default function HomeScreen(){
             </div>
             {
                 userExists ?
-                <a href="./jobs" className="home-button">Search jobs</a> :
-                <a href="./profiles" className="home-button">Search profiles</a>
+                <Link to="/jobs" className="home-button">Search jobs</Link> :
+                <Link to="/profiles" className="home-button">Search profiles</Link>
             }
             <div>
                 <p>If you don't have a profile</p>
