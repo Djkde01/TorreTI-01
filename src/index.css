@@ -7,4 +7,42 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+.App {
+  width: 100%;
+  height: 100vh;
+}
+header {
+  width: 100vw;
+  height: 112px;
+  background-color: #27292d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header img {
+  height: 80px;
+}
+footer {
+  width: 100vw;
+  background-color: #27292d;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+a {
+  text-decoration: none;
+  color: red;
 }
