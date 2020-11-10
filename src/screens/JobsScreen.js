@@ -5,11 +5,11 @@ import axios from 'axios'
 
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
+import Job from '../components/Job';
 
 export default function JobsScreen(){
-    const user = Cookies.get('userID')
-    const [profile, setProfile] = useState([]);
-    const [jobs, setJobs] = useState([])
+    const user = Cookies.get('userID');
+    const [jobs, setJobs] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
 
@@ -17,11 +17,9 @@ export default function JobsScreen(){
         const fetchData = async()=>{
             try {
                 setLoading(true);
-                const { userData } = await axios.get(`https://torre.bio/api/bios/${user}`);
-                const { jobsData } = await axios.post("https://search.torre.co/opportunities/_search/?offset=0&size=10");
+                const { data } = await axios.post("https://search.torre.co/opportunities/_search/?offset=0&size=10");
                 setLoading(false);
-                setProfile(userData);
-                setJobs(jobsData.results);
+                setJobs(data.results);
             } catch (err) {
                 setError(err.message);
                 setLoading(false);
@@ -37,7 +35,14 @@ export default function JobsScreen(){
             error ? 
             <MessageBox variant="danger">{error}</MessageBox> :
             <div className="row center">
-                <h3>Welcome back! {profile.name}</h3>
+                <h1>Welcome back {user}!</h1>
+                <h3>Here are some jobs for you</h3>
+                {
+                    jobs.map((job,i) =>(
+                        <Job key={i} profile={job} index={i} />
+                    )
+                    )
+                }
                 
             </div>
             }

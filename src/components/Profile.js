@@ -9,6 +9,7 @@ export default function Profile(props){
     const {profile} = props;
     const handleClick = () =>{
         Cookies.set('userID', profile.username);
+        Cookies.set('userPicture', profile.picture);
     }
     return(
         <div key={profile.index} className="card">
